@@ -9,6 +9,14 @@ import java.util.Map;
 @RestController
 public class APIController {
 
+    @GetMapping("/getRequest")
+    public Map<String, String> getMethod(){
+        var response = new HashMap<String, String>();
+
+        response.put("status", "success");
+        return response;
+    }
+
     @GetMapping("/encrypt")
     public Map<String, String> submitTextEncrypt(@RequestBody Text text){
         var response = new HashMap<String, String>();
